@@ -1,0 +1,49 @@
+@model IEnumerable<CarRentalApplication.Domain.DomainModels.Rent>
+
+@{
+    ViewData["Title"] = "My Rents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="h4 mb-4">Your Rents</h1>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        <p>You have no rents yet. <a asp-controller="Cars" asp-action="Index">Browse cars</a> to create a rent.</p>
+    </div>
+}
+else
+{
+    <div class="row g-3">
+    @foreach(var rent in Model)
+    {
+        <div class="col-md-6 col-lg-4">
+            <div class="card card-modern">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="card-title mb-0">Rent</h5>
+                        <span class="badge @(rent.IsFinished ? "bg-success" : "bg-warning")">@(rent.IsFinished ? "Finished" : "Active")</span>
+                    </div>
+                    <p class="text-muted small">ID: @rent.Id.ToString().Substring(0, 8)...</p>
+                    <p class="mb-3"><strong>Cars:</strong> @(rent.CarsInRent?.Count() ?? 0)</p>
+                    <div class="d-grid gap-2">
+                        <a asp-action="Details" asp-route-id="@rent.Id" class="btn btn-sm btn-outline-primary">View Details</a>
+                        @if (!rent.IsFinished)
+                        {
+                            <form asp-action="Finish" method="post">
+                                <input type="hidden" name="id" value="@rent.Id" />
+                                <button type="submit" class="btn btn-sm btn-success w-100">Finish Rent</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <a asp-action="Download" asp-route-id="@rent.Id" class="btn btn-sm btn-primary">Download Invoice</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+}

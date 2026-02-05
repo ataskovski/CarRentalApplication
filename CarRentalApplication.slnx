@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CarRentalApplication.Domain/CarRentalApplication.Domain.csproj" Id="96760906-c457-488a-bad5-ca0968d5f7b6" />
+  <Project Path="CarRentalApplication.Repository/CarRentalApplication.Repository.csproj" Id="fdfc7e82-6bb1-464d-9b86-18b883b06ef8" />
+  <Project Path="CarRentalApplication.Service/CarRentalApplication.Service.csproj" Id="0e2788e8-0260-4fa0-8a19-7633aca13b5d" />
+  <Project Path="CarRentalApplication.Web/CarRentalApplication.Web.csproj" />
+</Solution>

@@ -1,0 +1,13 @@
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\bin\Debug\net8.0\CarRentalApplication.Domain.deps.json
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\bin\Debug\net8.0\CarRentalApplication.Domain.dll
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\bin\Debug\net8.0\CarRentalApplication.Domain.pdb
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\obj\Debug\net8.0\CarRentalApplication.Domain.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\obj\Debug\net8.0\CarRentalApplication.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\obj\Debug\net8.0\CarRentalApplication.Domain.AssemblyInfoInputs.cache
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\obj\Debug\net8.0\CarRentalApplication.Domain.AssemblyInfo.cs
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\obj\Debug\net8.0\CarRentalApplication.Domain.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\obj\Debug\net8.0\CarRentalApplication.Domain.sourcelink.json
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\obj\Debug\net8.0\CarRentalApplication.Domain.dll
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\obj\Debug\net8.0\refint\CarRentalApplication.Domain.dll
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\obj\Debug\net8.0\CarRentalApplication.Domain.pdb
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Domain\obj\Debug\net8.0\ref\CarRentalApplication.Domain.dll

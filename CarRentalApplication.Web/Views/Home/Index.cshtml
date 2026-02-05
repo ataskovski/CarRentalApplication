@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using CarRentalApplication.Domain.Identity
+@inject SignInManager<CarRentalApplicationUser> SignInManager
+@inject UserManager<CarRentalApplicationUser> UserManager
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="text-center">
+        <h1 class="display-4">Welcome to the Car Rental App</h1>
+        <div class="alert alert-info">
+            <p>
+                <a asp-controller="Cars" asp-action="Index">Browse cars</a> to add them in your
+                <a asp-controller="Wishlist" asp-action="Index">Wishlist</a>
+                and rent them afterwards.
+            </p>
+        </div>
+    </div>
+}
+else
+{
+    <div class="text-center">
+        <h1 class="display-4">Welcome to the Car Rental App</h1>
+        <div class="alert alert-info">
+            <p>
+                You are able to browse our car collection here :
+                <a asp-controller="Cars" asp-action="Index">Browse cars</a>. 
+                If you want to rent a car, please
+                <a asp-area="Identity" asp-page="/Account/Register">Register</a>
+                or
+                <a asp-area="Identity" asp-page="/Account/Login">Login</a>.
+            </p>
+        </div>
+    </div>
+}

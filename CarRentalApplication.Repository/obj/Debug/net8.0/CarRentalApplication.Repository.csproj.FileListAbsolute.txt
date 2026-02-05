@@ -1,0 +1,16 @@
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\bin\Debug\net8.0\CarRentalApplication.Repository.deps.json
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\bin\Debug\net8.0\CarRentalApplication.Repository.dll
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\bin\Debug\net8.0\CarRentalApplication.Repository.pdb
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\bin\Debug\net8.0\CarRentalApplication.Domain.dll
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\bin\Debug\net8.0\CarRentalApplication.Domain.pdb
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\obj\Debug\net8.0\CarRentalApplication.Repository.csproj.AssemblyReference.cache
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\obj\Debug\net8.0\CarRentalApplication.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\obj\Debug\net8.0\CarRentalApplication.Repository.AssemblyInfoInputs.cache
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\obj\Debug\net8.0\CarRentalApplication.Repository.AssemblyInfo.cs
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\obj\Debug\net8.0\CarRentalApplication.Repository.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\obj\Debug\net8.0\CarRentalApplication.Repository.sourcelink.json
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\obj\Debug\net8.0\CarRenta.9950D681.Up2Date
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\obj\Debug\net8.0\CarRentalApplication.Repository.dll
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\obj\Debug\net8.0\refint\CarRentalApplication.Repository.dll
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\obj\Debug\net8.0\CarRentalApplication.Repository.pdb
+C:\Users\andre\OneDrive\Desktop\2025\is\CarRentalApplication\CarRentalApplication.Repository\obj\Debug\net8.0\ref\CarRentalApplication.Repository.dll

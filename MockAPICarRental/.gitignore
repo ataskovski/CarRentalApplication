@@ -1,0 +1,11 @@
+# Build results
+bin/
+obj/
+out/
+*.dll
+*.exe
+*.pdb
+
+# Visual Studio cache/options
+.vs/
+

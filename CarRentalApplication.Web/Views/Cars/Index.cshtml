@@ -1,0 +1,31 @@
+﻿@model IEnumerable<CarRentalApplication.Domain.DomainModels.Car>
+
+@{
+    ViewData["Title"] = "Cars";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h3">Available Cars</h1>
+</div>
+
+<div class="row g-3">
+@foreach (var item in Model) {
+    <div class="col-sm-6 col-lg-4">
+        <div class="card card-modern h-100">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">@item.Make @item.Model</h5>
+                <p class="text-muted mb-1">@item.Category • @item.Year</p>
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="card-price">@item.PricePerDay.ToString("C") / day</div>
+                    </div>
+                    <div>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+</div>

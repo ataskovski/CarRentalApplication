@@ -1,0 +1,6 @@
+@CarRentalMockAPI_HostAddress = http://localhost:5206
+
+GET {{CarRentalMockAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

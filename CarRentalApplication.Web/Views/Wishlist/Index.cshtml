@@ -1,0 +1,58 @@
+﻿@using CarRentalApplication.Domain.DTO
+@model WishlistDTO
+
+@{
+    ViewData["Title"] = "My Wishlist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1 class="h4">Your Wishlist</h1>
+    @if (Model.Cars.Any())
+    {
+        <form asp-action="Rent" method="post">
+            @Html.AntiForgeryToken()
+            <button type="submit" class="btn btn-success">Proceed to Rent</button>
+        </form>
+    }
+</div>
+
+@if (!Model.Cars.Any())
+{
+    <div class="alert alert-info">
+        <p>Your wishlist is empty. <a asp-controller="Cars" asp-action="Index">Browse cars</a> to add them.</p>
+    </div>
+}
+else
+{
+    <div class="row g-3 mb-4">
+        @foreach(var item in Model.Cars)
+        {
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-modern">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Car.Make @item.Car.Model</h5>
+                        <p class="text-muted small">Duration: <strong>@item.Days days</strong></p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <div>
+                                <div class="card-price">@((item.Car.PricePerDay * item.Days).ToString("C"))</div>
+                                <small class="text-muted">@item.Car.PricePerDay.ToString("C")/day</small>
+                            </div>
+                            <a asp-controller="Wishlist" asp-action="DeleteFromWishlist" asp-route-id="@item.CarId" class="btn btn-danger btn-sm">Remove</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="card card-modern bg-light">
+        <div class="card-body">
+            <h5 class="card-title">Summary</h5>
+            <div class="d-flex justify-content-between align-items-center">
+                <span>Total Price:</span>
+                <span class="h5 text-primary">@Model.TotalPrice.ToString("C")</span>
+            </div>
+        </div>
+    </div>
+}

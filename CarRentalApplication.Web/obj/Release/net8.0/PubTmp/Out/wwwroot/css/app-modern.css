@@ -1,0 +1,267 @@
+/* Modern application styles */
+:root {
+  --brand: #0d6efd;
+  --muted: #6c757d;
+  --success: #198754;
+  --danger: #dc3545;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: #f8f9fa;
+  color: #212529;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: color 0.2s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: white !important;
+}
+
+/* Cards */
+.card-modern {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-modern:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.card-title {
+  font-weight: 600;
+  color: #212529;
+}
+
+.card-price {
+  font-weight: 700;
+  color: var(--brand);
+  font-size: 1.25rem;
+}
+
+/* Footer */
+.footer-modern {
+  background: #0b1220;
+  color: #fff;
+  padding: 2rem 0;
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* Container & main */
+.container-main {
+  padding-top: 28px;
+  padding-bottom: 48px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-main main {
+  flex: 1;
+}
+
+/* Buttons */
+.btn-primary-modern {
+  background: var(--brand);
+  border: none;
+}
+
+.btn-primary-modern:hover {
+  background: #0b5ed7;
+}
+
+/* Tables */
+.table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table thead {
+  background: #f8f9fa;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Badges */
+.badge {
+  padding: 0.375rem 0.75rem;
+  font-weight: 500;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 8px;
+  border: none;
+}
+
+.alert-info {
+  background-color: #cfe2ff;
+  color: #084298;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container-main {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+  
+  h1, .h4 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Form Inputs */
+.form-control {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.form-label {
+  color: #212529;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+/* Form Validation */
+.text-danger {
+  font-size: 0.85rem;
+}
+
+.alert {
+  border-radius: 8px;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+/* Auth Pages */
+.form-check-input {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: var(--brand);
+  border-color: var(--brand);
+}
+
+.form-check-input:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.form-check-label {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Button Enhancements */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--brand);
+  border-color: var(--brand);
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.btn:disabled {
+  opacity: 0.65;
+}
+
+/* Links */
+a {
+  transition: color 0.2s ease;
+}
+
+.text-primary {
+  color: var(--brand) !important;
+}
+
+.text-primary:hover {
+  color: #0b5ed7 !important;
+}
+
+.text-decoration-none:hover {
+  text-decoration: underline !important;
+}

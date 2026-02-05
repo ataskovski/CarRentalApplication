@@ -1,0 +1,78 @@
+@model CarRentalApplication.Domain.DomainModels.Rent
+
+@{
+    ViewData["Title"] = "Rent Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="mb-4">
+    <a asp-action="Index" class="btn btn-secondary btn-sm">Back to Rents</a>
+</div>
+
+<div class="card card-modern">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start mb-3">
+            <div>
+                <h2 class="h4">Rent Details</h2>
+                <p class="text-muted small">ID: @Model.Id</p>
+            </div>
+            <span class="badge @(Model.IsFinished ? "bg-success" : "bg-warning")">@(Model.IsFinished ? "Finished" : "Active")</span>
+        </div>
+
+        <hr />
+
+        <h5 class="mt-4 mb-3">Rental Information</h5>
+        <div class="row mb-4">
+            <div class="col-sm-6">
+                <p><strong>Owner:</strong> @(Model.Owner?.UserName ?? Model.OwnerId)</p>
+            </div>
+        </div>
+
+        <h5 class="mt-4 mb-3">Cars in Rent</h5>
+        <div class="table-responsive mb-4">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Make & Model</th>
+                        <th>Days</th>
+                        <th>Price/Day</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model.CarsInRent ?? Enumerable.Empty<CarRentalApplication.Domain.DomainModels.CarInRent>())
+                    {
+                        <tr>
+                            <td>@item.Car?.Make @item.Car?.Model</td>
+                            <td>@item.Days</td>
+                            <td>@item.Car?.PricePerDay.ToString("C")</td>
+                            <td class="fw-bold">@((item.Days * (item.Car?.PricePerDay ?? 0)).ToString("C"))</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="alert alert-light">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Total Amount:</h5>
+                <span class="h4 text-primary mb-0">@Model.CarsInRent?.Sum(x => x.Days * (x.Car?.PricePerDay ?? 0)).ToString("C")</span>
+            </div>
+        </div>
+
+        <div class="mt-4 d-grid gap-2">
+            @if (!Model.IsFinished)
+            {
+                <form asp-action="Finish" method="post" class="mb-2">
+                    <input type="hidden" name="id" value="@Model.Id" />
+                    <button type="submit" class="btn btn-success w-100">Finish Rent</button>
+                </form>
+                <button class="btn btn-secondary" disabled>Download Invoice</button>
+            }
+            else
+            {
+                <a asp-action="Download" asp-route-id="@Model.Id" class="btn btn-primary">Download Invoice</a>
+            }
+        </div>
+    </div>
+</div>
